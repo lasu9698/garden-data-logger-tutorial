@@ -1,0 +1,28 @@
+{
+    "name": "garden-data-logger-tutorial",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*",
+        "datalogger": "*",
+        "Environment-and-Science-IoT": "github:tinkertanker/pxt-iot-environment-kit#v5.6.5"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "garden-data-logger-tutorial.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "8.0.22",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
+}
