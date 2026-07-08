@@ -46,7 +46,7 @@ loops.everyInterval(60000, function () {
 We are going to repeat step 2 and 3 to log data for light intensity, soil moisture, and soil temperature
 Add three more Data Logger  ``||datalogger: log data column value 0 || `` blocks under the Air_Temperature block
 
-In second one, type "Light_Intensity" in the empty quotation. Then, replace 0 with  ``||environment: value of light intensity(0~100) at pin P3 ||`` 
+In second one, type "Light_Intensity" in the empty quotation. Then, replace 0 with Input  ``||input: light level||`` 
 
 In third one, type "Soil_Moisture" in the empty quotation. Then, replace 0 with  ``||environment: value of soil moisture(0~100) at pin P1 ||`` 
 
@@ -56,7 +56,7 @@ In fourth one, type "Soil_Temperature" in the empty quotation. Then, replace 0 w
 ```blocks
 loops.everyInterval(60000, function () {
     datalogger.log(datalogger.createCV("Air_Temperature", input.temperature()))
-    datalogger.log(datalogger.createCV("Light_Intensity", Environment.ReadLightIntensity(AnalogPin.P3)))
+    datalogger.log(datalogger.createCV("Light_Intensity", input.lightLevel()))
     datalogger.log(datalogger.createCV("Soil_Moisture", Environment.ReadSoilHumidity(AnalogPin.P1)))
     datalogger.log(datalogger.createCV("Soil_Temperature", Environment.Ds18b20Temp(DigitalPin.P2, Environment.ValType.DS18B20_temperature_C)))
 })
